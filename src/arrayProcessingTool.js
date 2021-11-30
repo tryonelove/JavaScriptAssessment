@@ -60,14 +60,14 @@ export function longestIncreasingSequence(array) {
   let maxLength = 1;
   let endIndex = 0;
 
-  for (let i = 0; i < array.length - 1; i++) {
-    if (array[i] < array[i + 1]) {
+  for (let i = 1; i < array.length; i++) {
+    if (array[i - 1] < array[i]) {
       currentLength += 1;
       maxLength = currentLength > maxLength ? currentLength : maxLength;
-      endIndex = i + 1;
+      endIndex = i;
     } else {
       currentLength = 1;
-      endIndex = i;
+      endIndex = maxLength === 1 ? i : i - 1;
     }
   }
 

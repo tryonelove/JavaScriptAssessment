@@ -47,7 +47,7 @@ describe('Cached results', function () {
       const secondCoomplex = { a: 1, b: 7 };
       const exprectedResult = '4 + 9i';
 
-      assert.deepEqual(
+      assert.deepStrictEqual(
         cachedAdd(firstComplex, secondCoomplex),
         createResult(exprectedResult, false)
       );
@@ -57,7 +57,7 @@ describe('Cached results', function () {
       const secondCoomplex = { a: 1, b: 7 };
       const exprectedResult = '4 + 9i';
 
-      assert.deepEqual(
+      assert.deepStrictEqual(
         cachedAdd(firstComplex, secondCoomplex),
         createResult(exprectedResult, true)
       );
@@ -68,7 +68,7 @@ describe('Cached results', function () {
       const secondCoomplex = { a: 2, b: 3 };
       const exprectedResult = '3 + 57i';
 
-      assert.deepEqual(
+      assert.deepStrictEqual(
         cachedAdd(firstComplex, secondCoomplex),
         createResult(exprectedResult, false)
       );
@@ -79,7 +79,7 @@ describe('Cached results', function () {
       const secondCoomplex = { a: 2, b: 3 };
       const exprectedResult = '3 + 57i';
 
-      assert.deepEqual(
+      assert.deepStrictEqual(
         cachedAdd(firstComplex, secondCoomplex),
         createResult(exprectedResult, true)
       );
